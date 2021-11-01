@@ -12,12 +12,12 @@ import java.util.List;
 import java.util.function.Predicate;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+/*import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;*/
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -41,8 +41,8 @@ public class TestUtil extends TestBase {
 	static String pageLoadStatus = null;
 //	public static String TESTDATA_SHEET_PATH = "C:\\Users\\josej\\Downloads\\Testdata.xlsx";
 
-	static Workbook book;
-	static Sheet sheet;
+	//static Workbook book;
+	//static Sheet sheet;
 	static JavascriptExecutor js;
 	Actions actionObject;
 	static WebDriverWait wait;
@@ -54,7 +54,7 @@ public class TestUtil extends TestBase {
 		actionObject = new Actions(driver);
 	}
 		
-		public static Object[][] getTestData(String sheetName) {
+		/*public static Object[][] getTestData(String sheetName) {
 
 		FileInputStream file=null;
 		try {
@@ -98,7 +98,7 @@ public class TestUtil extends TestBase {
 
 
 
-		}
+		}*/
 	
 
 	public static void takeScreenshotAtEndOfTest() throws IOException {
@@ -268,7 +268,7 @@ public class TestUtil extends TestBase {
 	
 	
 	
-
+/*
 	public String fetch_data_from_excel(String excel_name, int sheet_index, int row_index, int column_index) throws IOException {
 		
 
@@ -305,7 +305,7 @@ public class TestUtil extends TestBase {
 		return data;
 		
 		
-	}
+	}*/
 	public void accept_alert() {
 		driver.switchTo().alert().accept();
 	
