@@ -4,11 +4,12 @@ pipeline
 
     stages 
     {
-        stage('Build') 
+        stage('Compile Stage') 
         {
             steps 
             {
-                echo 'Build App'
+               withMaven(maven : 'MAVEN_HOME'){
+               sh 'mvn clean compile' 
             }
         }
 
@@ -16,7 +17,8 @@ pipeline
         {
             steps 
             {
-                echo 'Test App'
+               withMaven(maven : 'MAVEN_HOME')
+               sh 'mvn test'
             }
         }
 
@@ -24,7 +26,8 @@ pipeline
         {
             steps 
             {
-                echo 'Deploy App'
+               withMaven(maven : 'MAVEN_HOME'){
+               sh 'mvn deploy'
             }
         }
     }
