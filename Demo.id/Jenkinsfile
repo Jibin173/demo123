@@ -12,15 +12,17 @@ pipeline
                sh 'mvn clean compile' 
             }
         }
+     }
 
         stage('Test') 
         {
             steps 
             {
-               withMaven(maven : 'MAVEN_HOME')
+               withMaven(maven : 'MAVEN_HOME'){
                sh 'mvn test'
             }
         }
+      }
 
         stage('Deploy') 
         {
