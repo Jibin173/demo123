@@ -23,7 +23,7 @@ public class facebooktest extends TestBase {
 	}
 	
 	@Test
-	public void fb() {
+	public void fb1() {
 		fb.login();
 	}
 
