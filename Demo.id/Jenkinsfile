@@ -32,7 +32,7 @@ pipeline
                Please find the result''', cc: '', from: '', replyTo: '', subject: 'Report from Jenkins', to: 'josejibin173@gmail.com'
             }
         }
-    }
+    
 
     
    
